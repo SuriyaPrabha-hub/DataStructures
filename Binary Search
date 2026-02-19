@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	 int arr[]={30,67,89,98,100,114,167,204};
+	 int target=89;
+	 int start=0,end=arr.length-1,mid;
+	 while(start<=end){
+	     mid=(start+end)/2;
+	     if(arr[mid]==target){
+	         System.out.println(mid);
+	         return;
+	     }
+	     else if(arr[mid]<target){
+	         start=mid+1;
+	     }
+	    else if(arr[mid]>target) {
+	        end=mid-1;
+	    }
+	 }
+	   System.out.print(-1); 
+	}
+}
