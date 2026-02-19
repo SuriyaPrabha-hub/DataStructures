@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int arr[]={23,90,78,45,39,12,3};
+		int i, j,min,temp,len=arr.length;
+		for(i=0;i<len;i++){
+		    min=i;
+		    for(j=i+1;j<len;j++){
+		        if(arr[j]>min){
+		            min=j;
+		        }
+		    }
+		    temp=arr[i];
+		    arr[i]=arr[min];
+		    arr[min]=temp;
+		}
+		for(int X:arr)
+		System.out.print(X+" ");
+	}
+}
